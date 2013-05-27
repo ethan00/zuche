@@ -1,0 +1,72 @@
+<div class="jobct">
+  <div class="d_cname">
+    <%= link_to "泸州租车网", root_url %>  »<%= link_to "车找人", pinches_url %> » <%= @pinche.title %>
+  </div>
+
+  <div class="d_left">
+    <h2><%= @pinche.title %></h2>
+    <span>发布时间： <%= @pinche.created_at.strftime("%Y-%m-%d %H:%m") %> </span>
+    <br>
+    <span>所在地：<%= "#{@pinche.dep_province} - #{@pinche.dep_city} - #{@pinche.dep_county} - #{@pinche.dep_desc}" %></span>
+    <br>
+    <span>目的地：<%= "#{@pinche.des_province} - #{@pinche.des_city} - #{@pinche.des_county} - #{@pinche.des_desc}" %></span>
+    <br>
+    <span>发车时间：<%= @pinche.go_time %></span>
+
+    <br>
+    <span>途径路线:<%= @pinche.way %></span>
+    <br>
+    <span>车型:<%= @pinche.car_info %></span>
+    <span>汽车档次:<%= @pinche.car_level %></span>
+    <span>可拼人数:<%= @pinche.person %></span>
+
+    <div class="ad300" style="border: 1px solid darkred">这个可以是广告</div>
+
+    <div class="d_content">
+
+      <%= @pinche.body %>
+      <br><br>
+      联系我时请说明在泸州拼车网上看到的
+      <br>
+      联系人：<%= @pinche.contact %>
+
+      <br>
+      电话：<%= @pinche.tel %>
+
+      <div class="suggest">提示：本站信息全部来源于互联网，请广大网友谨防受骗上当</div>
+    </div>
+
+  </div>
+
+  <div style="clear:both;"></div>
+
+  <div class="comment_block">
+    <font> 回复 </font>
+  </div>
+
+  <div class="comment_list">
+    <ul>
+      <% @pinche.comments.each do |comment| %>
+          <li>
+            <p class="commentdetail_txt">
+              <%= comment.body %>
+            </p>
+
+            <div class="commentdetail_bar">
+              <p> <%= comment.created_at.strftime("%Y-%m-%d %H:%m") %>
+                来自:<%= (comment.user) ? (comment.user.name) : "匿名" %> </p>
+
+            </div>
+          </li>
+      <% end %>
+    </ul>
+
+  </div>
+
+  <%# if !current_user.blank? %>
+      <div id="repeat_comment">
+        <%= render "report_form" %>
+      </div>
+  <%# end %>
+</div>
+

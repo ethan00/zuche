@@ -1,0 +1,67 @@
+<div class="jobct">
+  <div class="d_cname">
+    <%= link_to "泸州租车网", root_url %>  »<%= link_to "租车", rents_url %> » <%= @rent.title %>
+  </div>
+
+  <div class="d_left">
+    <h2><%= @rent.title %></h2>
+    <span>发布时间： <%= @rent.created_at.strftime("%Y-%m-%d %H:%m") %> </span>
+    <br>
+    <span>所在地：<%= @rent.departure %></span>
+    <br>
+    <span>拼车性质：<%= @rent.style %></span>
+    <br>
+    <span>价格:<%= @rent.price %>/天</span>
+    <br>
+    <span>车辆信息:<%= @rent.car_info %></span>
+
+
+    <div class="ad300" style="border: 1px solid darkred">这个可以是广告</div>
+
+    <div class="d_content">
+
+      <%= @rent.body %>
+      <br><br>
+      联系我时请说明在泸州拼车网上看到的
+      <br>
+      联系人：<%= @rent.contact %>
+
+      <br>
+      电话：<%= @rent.tel %>
+
+      <div class="suggest">提示：本站信息全部来源于互联网，请广大网友谨防受骗上当</div>
+    </div>
+
+  </div>
+
+  <div style="clear:both;"></div>
+
+  <div class="comment_block">
+    <font> 回复 </font>
+  </div>
+
+  <div class="comment_list">
+    <ul>
+      <% @rent.comments.each do |comment| %>
+          <li>
+            <p class="commentdetail_txt">
+              <%= comment.body %>
+            </p>
+
+            <div class="commentdetail_bar">
+              <p> <%= comment.created_at.strftime("%Y-%m-%d %H:%m") %>
+                来自:<%= (comment.user) ? (comment.user.name) : "匿名" %> </p>
+
+            </div>
+          </li>
+      <% end %>
+    </ul>
+
+  </div>
+
+  <%# if !current_user.blank? %>
+      <div id="repeat_comment">
+        <%= render "report_form" %>
+      </div>
+  <%# end %>
+</div>

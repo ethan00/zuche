@@ -1,0 +1,65 @@
+<div class="wrap">
+  <div class="main">
+    <div class="center_choose">
+      <strong>管理信息</strong>
+      <ul>
+        <li>
+          <%= link_to "我发布的信息", my_pinches_list_url %>
+        </li>
+
+      </ul>
+
+      <strong>账户管理</strong>
+      <ul>
+        <li>
+          <%= link_to "修改密码", my_password_url %>
+        </li>
+
+      </ul>
+    </div>
+    <div class="center_content">
+      <h3>我发布的信息</h3>
+
+      <div id="tiezi_sub_tab" class="sub_nav clearfix">
+        <ul>
+          <li class="current">
+            <%= link_to "车找人信息", my_pinches_list_url %>
+          </li>
+          <li class="">
+            <%= link_to "人找车信息", my_qiupins_list_url %>
+          </li>
+          <li class="">
+            <%= link_to "租车信息", my_rents_list_url %>
+          </li>
+        </ul>
+      </div>
+      <div class="favth_thead">
+        <div class="favth_col1">标题</div>
+        <div class="favth_col2">帖子状态</div>
+        <div class="favth_col3">发表时间</div>
+        <div class="favth_col4">最后更新时间</div>
+      </div>
+
+      <ul>
+        <% @pinches.each do |pinche| %>
+            <li class="favth_item">
+              <div class="favth_col1">
+                <%= link_to truncate(pinche.title, :length => 20), pinche_path(pinche) %>
+              </div>
+              <div class="favth_col2">
+                <%= status(pinche.is_checked) %>
+              </div>
+              <div class="favth_col3">
+                <%= pinche.created_at.strftime("%Y-%m-%d %H:%m") %>
+              </div>
+              <div class="favth_col4">
+                <%= pinche.updated_at.strftime("%Y-%m-%d %H:%m") %>
+              </div>
+              <div style="clear: both;"></div>
+            </li>
+        <% end %>
+      </ul>
+
+    </div>
+  </div>
+</div>

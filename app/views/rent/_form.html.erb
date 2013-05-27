@@ -1,0 +1,20 @@
+<%= simple_form_for @rent, :url => rent_create_url do |f| %>
+    <div class="merchant-box">
+
+      <%= f.input :title, label: '标题' %>
+      <%= f.input :departure, collection: ["江阳区", "龙马潭区", "泸县", "纳溪","合江", "叙永", "古蔺"], label: '提车地点' %>
+      <%= f.input :style, as: :radio_buttons, collection: ["公司", "个人"], label: '类型' %>
+      <p></p>
+      <%= f.input :price, label: '价格' %>
+      <%= f.input :car_info, label: '车辆信息' %>
+      <%= f.input :contact, label: '联系人' %>
+      <%= f.input :tel, label: '联系电话' %>
+      <%= f.input :body, input_html: {style: 'height:300px; width:412px;'}, label: '详情' %>
+
+
+    </div>
+
+    <div class="btn-box clearfix" style="margin-left: 180px;">
+      <%= f.button :submit, "提交", :class => "btn" %>
+    </div>
+<% end %>

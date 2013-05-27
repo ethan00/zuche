@@ -1,0 +1,9 @@
+<%= simple_form_for Comment.new, :url => rent_comment_create_path(@rent), :remote => true do |f| %>
+    <%= f.input :body, input_html: {style: 'height:100px; width:412px;'}, label: false %>
+    <p>验证码: <%= captcha_tag %><span><%= link_to "换一张", rent_change_captcha_path(@rent), :remote => true %></span></p>
+    <p><%= text_field_tag :captcha %></p>
+    <%= f.button :submit, "提交", :class => "btn" %>
+
+
+
+<% end %>

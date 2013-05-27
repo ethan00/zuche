@@ -1,0 +1,59 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+
+zh-CN:
+  devise:
+    confirmations:
+      confirmed: "登陆成功"
+      send_instructions: "您讲在几分钟后接到一封验证邮件，请注意查收邮件"
+      send_paranoid_instructions: "您的电子邮件地址已经存在,您将收到一封电子邮件,用以确认"
+    failure:
+      already_authenticated: "您已经登陆"
+      inactive: "您的账户没有激活"
+      invalid: "邮箱或者密码不合法"
+      invalid_token: "无效的身份验证"
+      locked: "您的账户已经锁定"
+      not_found_in_database: "无效的邮箱或者密码"
+      timeout: "您的登陆信息已经过期，请重新登陆"
+      unauthenticated: "您需要先登陆或者注册"
+      unconfirmed: "您需要先验证您的账户"
+    mailer:
+      confirmation_instructions:
+        subject: "验证身份信息"
+      reset_password_instructions:
+        subject: "重置密码"
+      unlock_instructions:
+        subject: "解锁验证"
+    omniauth_callbacks:
+      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
+      success: "Successfully authenticated from %{kind} account."
+    passwords:
+      no_token: "你不能访问这个页面"
+      send_instructions: "您将收到一封邮件，用以重置您的密码"
+      send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
+      updated: "密码修改成功"
+      updated_not_active: "密码修改成功"
+    registrations:
+      destroyed: "退出成功"
+      signed_up: "登陆成功"
+      signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
+      signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
+      signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please open the link to activate your account."
+      update_needs_confirmation: "你更新你的帐户成功,但我们需要验证您的新电子邮件地址。请检查你的电子邮件和点击确认链接,完成确认你的新电子邮件地址。"
+      updated: "更新账户成功"
+    sessions:
+      signed_in: "登陆成功"
+      signed_out: "退出成功"
+    unlocks:
+      send_instructions: "您将马上收到一封邮件解锁您的账户"
+      send_paranoid_instructions: "If your account exists, you will receive an email with instructions about how to unlock it in a few minutes."
+      unlocked: "账户解锁成功，请登陆继续操作"
+  errors:
+    messages:
+      already_confirmed: "已经完成验证，请重新登陆"
+      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
+      expired: "请求已过期"
+      not_found: "没有发现"
+      not_locked: "没有锁定"
+      not_saved:
+        one: "1 error prohibited this %{resource} from being saved:"
+        other: "%{count} errors prohibited this %{resource} from being saved:"

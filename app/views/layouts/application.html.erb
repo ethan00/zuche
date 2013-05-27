@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @seo_title %></title>
+  <meta name="keywords" content="<%= @seo_keywords %>"/>
+  <meta name="description" content="<%= @seo_description %>" />
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="topwrap">
+  <div class="logo">
+    <a href="http://www.0830pk.com">
+      <%= image_tag 'logo.png', :alt => "泸州租车网", :border => "0" %>
+      </a>
+  </div>
+
+  <%= render 'layouts/login' %>
+</div>
+
+<div class="nav">
+  <ul class="nav_bar">
+    <li class="nav_item">
+      <%= menu_nav :nav_home do%><% end %>
+    </li>
+    <li class="nav_item">
+      <span class="nav_dot"></span>
+    </li>
+    <li class="nav_item">
+      <%= menu_nav :nav_pinche do%><% end %>
+    </li>
+    <li class="nav_item">
+      <span class="nav_dot"></span>
+    </li>
+    <li class="nav_item">
+      <%= menu_nav :nav_qiupin do%><% end %>
+    </li>
+    <li class="nav_item">
+      <span class="nav_dot"></span>
+    </li>
+    <li class="nav_item">
+      <%= menu_nav :nav_rent do%><% end %>
+    </li>
+  </ul>
+</div>
+
+
+<%= yield %>
+
+
+<div class="wrap">
+  <div class="line"></div>
+  <div class="bomttomfont">
+    <a href="#">帮助中心</a> |
+    <a href="#">站点简介</a> |
+    <a href="#">广告赞助</a> |
+    <a href="#">联系我们</a> |
+    <a href="#">用户协议</a>
+    <br>
+    泸州拼车租车网&nbsp;
+    <br>©2013&nbsp;蜀ICP备8888888号　
+  </div>
+</div>
+
+
+</body>
+</html>

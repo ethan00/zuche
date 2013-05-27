@@ -1,0 +1,31 @@
+<div class="topclass">
+  <div style="float:right;width: 169px; height: 60px;">
+    <%= link_to "", rent_new_url, :class => "btn-3" %>
+  </div>
+
+</div>
+<div class="topclass">
+  <div class="listcontent">
+    <div class="joblist">
+      <ul>
+        <li>
+          <span class="jobtitle">租车信息</span>
+          <span class="listcompany">发布人</span>
+          <span class="listzptime">发布时间</span>
+        </li>
+        <% @rents.each do |rent| %>
+            <li>
+                            <span class="jobtitle">
+                                <%= link_to truncate(rent.title, :length => 30), rent_path(rent), :class => "Linklist" %>
+                            </span>
+              <span class="listcompany"><%= (rent.user)?(rent.user.name):"匿名" %></span>
+              <span class="listzptime">　<%= rent.created_at.strftime("%m-%d") %></span>
+            </li>
+        <% end %>
+
+
+      </ul>
+      <%= will_paginate @rents %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,94 @@
+<style type="text/css">
+    .ui-timepicker-div .ui-widget-header {
+        margin-bottom: 8px;
+    }
+
+    .ui-timepicker-div dl {
+        text-align: left;
+    }
+
+    .ui-timepicker-div dl dt {
+        height: 25px;
+        margin-bottom: -25px;
+    }
+
+    .ui-timepicker-div dl dd {
+        margin: 0 10px 10px 65px;
+    }
+
+    .ui-timepicker-div td {
+        font-size: 90%;
+    }
+
+    .ui-tpicker-grid-label {
+        background: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ui_tpicker_hour_label, .ui_tpicker_minute_label, .ui_tpicker_second_label,
+    .ui_tpicker_millisec_label, .ui_tpicker_time_label {
+        padding-left: 20px
+    }
+
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/jquery-ui-form.js"></script>
+<script type="text/javascript" src="/assets/jquery-ui-slide.min.js"></script>
+<script type="text/javascript" src="/assets/jquery-ui-timepicker-addon.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $('#go_time').datetimepicker();
+    })
+</script>
+
+<%= simple_form_for @pinche, :url => pinche_create_url do |f| %>
+    <div class="merchant-box">
+
+      <%= f.input :title, label: '标题' %>
+      <%= f.input :go_time,as: :string, input_html: {id: "go_time"}, label: '出发时间',:readonly => true %>
+
+
+      <p></p>
+      <%#= f.input :departure, label: '出发地' %>
+      <%#= f.input :destination, label: '目的地' %>
+      <%= f.input :way, label: '途径路线' %>
+      <%= f.input :car_info, collection: ["轿车", "5座商务车", "7座商务车", "面包车", "其他"], label: '车型' %>
+      <%= f.input :car_level, collection: ["10万以下", "10万-20万", "20万-50万", "50万以上"], label: '汽车档次' %>
+      <div class="string required">
+      <label class="string required"><abbr title="required">*</abbr> 出发地点</label>
+      <select id="dep_province" name="pinche[dep_province]" class="required" required="required"></select>&nbsp;&nbsp;
+      <select id="dep_city" name="pinche[dep_city]" class="required" required="required" ></select>&nbsp;&nbsp;
+      <select id="dep_county" name="pinche[dep_county]" class="required" required="required"></select>
+      </div>
+      <%= f.input :dep_desc, label: '详细地址' %>
+
+      <div class="string required">
+        <label class="string required"><abbr title="required">*</abbr> 目的地点</label>
+        <select id="des_province" name="pinche[des_province]" class="required" required="required" ></select>&nbsp;&nbsp;
+        <select id="des_city" name="pinche[des_city]" class="required" required="required" ></select>&nbsp;&nbsp;
+        <select id="des_county" name="pinche[des_county]" class="required" required="required"></select>
+      </div>
+      <%= f.input :des_desc, label: '详细地址' %>
+
+      <%= f.input :person, label: '可拼人数' %>
+      <%= f.input :contact, label: '联系人' %>
+      <%= f.input :tel, label: '联系电话' %>
+
+      <%= f.input :body, input_html: {style: 'height:300px; width:412px;'}, label: '详情' %>
+
+    </div>
+
+    <div class="btn-box clearfix" style="margin-left: 180px;">
+      <%= f.button :submit, "提交", :class => "btn" %>
+    </div>
+<% end %>
+<script type="text/javascript" src="/assets/area.js"></script>
+<script type="text/javascript">
+    _init_to_area();
+    _init_area();
+
+</script>

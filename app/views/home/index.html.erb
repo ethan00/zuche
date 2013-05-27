@@ -1,0 +1,76 @@
+<div class="wrap">
+  <div class="main">
+    <div class="PartTime">
+      <div class="gbc_corner qiupin_corner"></div>
+      <span class="more"><%= link_to "更多", qiupins_url %></span>
+      <ul>
+        <% @qiupins.each do |qiupin| %>
+            <li>
+              <span style="width: 280px;"><%= link_to truncate(qiupin.title, :length => 20), qiupin_path(qiupin) %></span>
+              <span style="width: 70px;"><%= DateTime.parse(qiupin.go_time).strftime("%m-%d %H:%m") %></span>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="PartTime">
+      <div class="gbc_corner pinche_corner"></div>
+      <span class="more"><%= link_to "更多", pinches_url %></span>
+      <ul>
+        <% @pinches.each do |pinche| %>
+            <li>
+              <span style="width: 280px;"><%= link_to truncate(pinche.title, :length => 20), pinche_path(pinche) %></span>
+              <span style="width: 70px;"><%= DateTime.parse(pinche.go_time).strftime("%m-%d %H:%m") %></span>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="ToPost">
+      <%= link_to "", pinche_new_url, :class => "btn-1" %>
+      <br>
+      <%= link_to "", qiupin_new_url, :class => "btn-2" %>
+      <br>
+      <%= link_to "", rent_new_url, :class => "btn-3" %>
+    </div>
+  </div>
+</div>
+
+<table width="1001" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody>
+  <tr>
+    <td><a href="#" target="_blank"><img src="/assets/tiao.jpg" alt="广告位招商" width="1001" height="90" border="0"></a></td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="wrap">
+  <div class="main">
+    <div class="indexqz">
+      <div class="gbc_corner zuche_corner"></div>
+      <span class="more" style="float:right"><%= link_to "更多", rents_url %></span>
+      <ul>
+        <% @rents.each do |rent| %>
+            <li>
+              <em><%= link_to truncate(rent.title, :length => 20), rent_path(rent) %></em>
+              <span style="width: 50px;"> <%= rent.style %> </span>
+              <span style="width: 50px;"> <%= rent.price %>/天 </span>
+              <span style="width: 75px;"> <%= rent.departure %> </span>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="Recruitment">
+      <div class="gbc_corner hezuo_corner"></div>
+      <span class="more"></span>
+      <ul>
+        <% @companies.each do |company| %>
+            <li>
+              <%= link_to company.title, company.link, :target => "_blank" %>
+            </li>
+        <% end%>
+      </ul>
+    </div>
+  </div>
+</div>

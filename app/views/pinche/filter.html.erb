@@ -1,0 +1,63 @@
+<div class="topclass">
+  <div style="float:left;width: 700px; ">
+    <p>筛选条件</p>
+
+    <form action="/pinches/filter" method="get">
+      <b>目的地</b>
+      省份：<select id="des_province" name="pinche[des_province]" class="filter"></select>&nbsp;&nbsp;
+      市：<select id="des_city" name="pinche[des_city]" class="filter"></select>&nbsp;&nbsp;
+      区县：<select id="des_county" name="pinche[des_county]" class="filter"></select>
+      车型：<select class="filter" id="pinche_car_info" name="pinche[car_info]">
+      <option value="不限">不限</option>
+      <option value="轿车">轿车</option>
+      <option value="5座商务车">5座商务车</option>
+      <option value="7座商务车">7座商务车</option>
+      <option value="面包车">面包车</option>
+      <option value="其他">其他</option>
+    </select>
+      <input name="search_submit" type="submit" value="确定"/>
+    </form>
+  </div>
+  <div style="float:right;width: 169px; height: 60px;">
+    <%= link_to "", pinche_new_url, :class => "btn-1" %>
+  </div>
+
+</div>
+
+<div class="topclass">
+  <div>您选择的筛选条件为：  目的地【<%= condition(@param)%>】    车型【<%= @param[:car_info]%>】</div>
+  <div class="listcontent">
+
+    <div class="joblist">
+      <ul>
+        <li>
+          <span style="width:275px;">车找人信息</span>
+          <span style="width:200px;">出发地</span>
+          <span style="width:200px;">目的地</span>
+          <span style="width: 125px;">车型</span>
+          <span style="width: 150px;">发车时间</span>
+        </li>
+        <% @pinches.each do |pinche| %>
+            <li>
+              <span style="width: 275px;">
+                  <%= link_to truncate(pinche.title, :length => 30), pinche_path(pinche), :class => "Linklist" %>
+              </span>
+              <span style="width: 200px;"><%= "#{pinche.dep_city},#{pinche.dep_county}" %></span>
+              <span style="width: 200px;"><%= "#{pinche.des_city},#{pinche.des_county}" %></span>
+              <span style="width: 125px;"><%= pinche.car_info %></span>
+              <span style="width: 150px;"><%= pinche.go_time %></span>
+            </li>
+        <% end %>
+
+
+      </ul>
+      <%= will_paginate @pinches %>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/assets/area.js"></script>
+<script type="text/javascript">
+    _init_to_area();
+
+</script>

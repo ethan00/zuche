@@ -1,0 +1,13 @@
+var content = "<%= escape_javascript(render "new_report_form" )%>"
+
+$("#repeat_comment").html(
+
+        content
+);
+
+$("#comment_body").text("");
+
+$(".comment_list ul").append("<%= escape_javascript(render :partial => 'repeat') %>");
+
+$('.comment_list ul li:last').show("slow");
+
