@@ -6,4 +6,16 @@ class HomeController < ApplicationController
     @qiupins = Qiupin.checked.order('id desc').limit(10)
     @companies = Company.order('id desc').limit(10)
   end
+
+  def contact_me
+
+  end
+
+  def service
+
+  end
+
+  def agreement
+
+  end
 end

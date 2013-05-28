@@ -51,6 +51,12 @@ Zuche::Application.routes.draw do
   get 'center/change_password' => 'center#change_password', :as => 'my_password'
 
   get 'home' => 'home#index'
+
+  get 'contact_me' => 'home#contact_me', :as => 'contact_me'
+
+  get 'service' => 'home#service', :as => 'service'
+
+  get 'agreement' => 'home#agreement', :as => 'agreement'
   root :to => 'home#index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
