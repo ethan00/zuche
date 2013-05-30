@@ -8,7 +8,7 @@
     <file path="/routes.rb" changelist="3638bb6c-5de4-4d42-a00e-70ceaf00e9db" time="1369733164281" ignored="false" />
     <file path="/home_controller.rb" changelist="3638bb6c-5de4-4d42-a00e-70ceaf00e9db" time="1369733073467" ignored="false" />
     <file path="$PROJECT_DIR$/log/development.log" changelist="3638bb6c-5de4-4d42-a00e-70ceaf00e9db" time="1365295589907" ignored="false" />
-    <file path="/application.html.erb" changelist="3638bb6c-5de4-4d42-a00e-70ceaf00e9db" time="1369902535963" ignored="false" />
+    <file path="/application.html.erb" changelist="3638bb6c-5de4-4d42-a00e-70ceaf00e9db" time="1369903939032" ignored="false" />
     <file path="/a.rxml" changelist="3638bb6c-5de4-4d42-a00e-70ceaf00e9db" time="1365210753155" ignored="false" />
     <file path="/a.coffee" changelist="3638bb6c-5de4-4d42-a00e-70ceaf00e9db" time="1365210758088" ignored="false" />
     <file path="/a.feature" changelist="3638bb6c-5de4-4d42-a00e-70ceaf00e9db" time="1365210760662" ignored="false" />
@@ -155,7 +155,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="37" selection-start="1444" selection-end="1444" vertical-scroll-proportion="0.67765045">
+            <state line="15" column="45" selection-start="540" selection-end="540" vertical-scroll-proportion="0.32234958">
               <folding />
             </state>
           </provider>
@@ -225,8 +225,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="104" />
-    <option name="y" value="159" />
+    <option name="x" value="580" />
+    <option name="y" value="165" />
     <option name="width" value="1384" />
     <option name="height" value="865" />
   </component>
@@ -271,6 +271,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="zuche" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zuche" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zuche" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -818,7 +832,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="104" y="159" width="1384" height="865" extended-state="0" />
+    <frame x="580" y="165" width="1384" height="865" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1007,7 +1021,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="37" selection-start="1444" selection-end="1444" vertical-scroll-proportion="0.67765045">
+        <state line="15" column="45" selection-start="540" selection-end="540" vertical-scroll-proportion="0.32234958">
           <folding />
         </state>
       </provider>
