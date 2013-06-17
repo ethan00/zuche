@@ -7,7 +7,7 @@
         <% @qiupins.each do |qiupin| %>
             <li>
               <span style="width: 280px;"><%= link_to truncate(qiupin.title, :length => 20), qiupin_path(qiupin) %></span>
-              <span style="width: 70px;"><%= DateTime.parse(qiupin.go_time).strftime("%m-%d %H:%m") %></span>
+              <span style="width: 70px;"><%= DateTime.parse(qiupin.go_time).strftime("%m-%d %H:%M") %></span>
             </li>
         <% end %>
       </ul>
@@ -19,8 +19,13 @@
       <ul>
         <% @pinches.each do |pinche| %>
             <li>
-              <span style="width: 280px;"><%= link_to truncate(pinche.title, :length => 20), pinche_path(pinche) %></span>
-              <span style="width: 70px;"><%= DateTime.parse(pinche.go_time).strftime("%m-%d %H:%m") %></span>
+              <span style="width: 280px;">
+                <%= link_to truncate(pinche.title, :length => 20), pinche_path(pinche) %>
+                <% if pinche.set_top != 999 %>
+                    <%= image_tag "hot_1.gif" %>
+                  <% end %>
+              </span>
+              <span style="width: 70px;"><%= DateTime.parse(pinche.go_time).strftime("%m-%d %H:%M") %></span>
             </li>
         <% end %>
       </ul>
@@ -40,6 +45,9 @@
   <tbody>
   <tr>
     <td><a href="http://www.0830pk.com/rent/1" target="_blank"><img src="/assets/tiao.jpg" alt="广告位招商" width="1001" height="90" border="0"></a></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.0830pk.com/rent/1" target="_blank"><img src="/assets/tiao2.gif" alt="广告位招商" width="1001" height="90" border="0"></a></td>
   </tr>
   </tbody>
 </table>

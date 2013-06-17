@@ -40,6 +40,9 @@
             <li>
               <span style="width: 275px;">
                   <%= link_to truncate(pinche.title, :length => 30), pinche_path(pinche), :class => "Linklist" %>
+                  <% if pinche.set_top != 999 %>
+                    <%= image_tag "hot_1.gif" %>
+                  <% end %>
               </span>
               <span style="width: 200px;"><%= "#{pinche.dep_city},#{pinche.dep_county}" %></span>
               <span style="width: 200px;"><%= "#{pinche.des_city},#{pinche.des_county}" %></span>

@@ -6,7 +6,7 @@ class PincheController < ApplicationController
   before_filter :is_authorize, :only => ['new', 'create', 'comment_create']
 
   def index
-    @pinches = Pinche.checked.order('id desc').paginate(:page => params[:page], :per_page => 30)
+    @pinches = Pinche.checked.order('set_top').order('id desc').paginate(:page => params[:page], :per_page => 30)
   end
 
   def show

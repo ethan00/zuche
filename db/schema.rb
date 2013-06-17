@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130416071946) do
+ActiveRecord::Schema.define(:version => 20130617012556) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -90,6 +90,7 @@ ActiveRecord::Schema.define(:version => 20130416071946) do
     t.integer  "user_id"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
+    t.integer  "set_top",      :default => 999
   end
 
   add_index "pinches", ["car_info"], :name => "index_pinches_on_car_info"
@@ -101,6 +102,7 @@ ActiveRecord::Schema.define(:version => 20130416071946) do
   add_index "pinches", ["des_county"], :name => "index_pinches_on_des_county"
   add_index "pinches", ["des_province"], :name => "index_pinches_on_des_province"
   add_index "pinches", ["is_checked"], :name => "index_pinches_on_is_checked"
+  add_index "pinches", ["set_top"], :name => "index_pinches_on_set_top"
   add_index "pinches", ["user_id"], :name => "index_pinches_on_user_id"
 
   create_table "qiupins", :force => true do |t|

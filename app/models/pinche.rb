@@ -2,7 +2,7 @@
 class Pinche < ActiveRecord::Base
   attr_accessible :title,:body, :user, :car_level, :car_info, :way, :car_info, :contact, :tel,
                   :person, :user_id, :go_time, :is_checked, :dep_province, :dep_city, :dep_county, :dep_desc,
-                  :des_province, :des_city, :des_county, :des_desc
+                  :des_province, :des_city, :des_county, :des_desc, :set_top
   belongs_to :user
   has_many :comments, :as => :commentable, :dependent => :destroy
   validates :title, :presence => true, :length => { :minimum => 4, :message => "标题必须大于4个字符"  }
