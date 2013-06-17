@@ -139,7 +139,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pinche/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="0" selection-start="1538" selection-end="1663" vertical-scroll-proportion="-14.333333">
+            <state line="49" column="72" selection-start="2024" selection-end="2024" vertical-scroll-proportion="-18.708334">
               <folding>
                 <element signature="n#style#0;n#span#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
               </folding>
@@ -150,7 +150,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="55" selection-start="2596" selection-end="2596" vertical-scroll-proportion="0.6388102">
+            <state line="48" column="49" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.38243628">
               <folding />
             </state>
           </provider>
@@ -1038,7 +1038,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pinche/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1538" selection-end="1663" vertical-scroll-proportion="-14.333333">
+        <state line="49" column="72" selection-start="2024" selection-end="2024" vertical-scroll-proportion="-18.708334">
           <folding>
             <element signature="n#style#0;n#span#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
@@ -1047,7 +1047,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="55" selection-start="2596" selection-end="2596" vertical-scroll-proportion="0.6388102">
+        <state line="48" column="49" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.38243628">
           <folding />
         </state>
       </provider>
